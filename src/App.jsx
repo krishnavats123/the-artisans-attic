@@ -778,7 +778,7 @@ const products = [
   {
     id: crypto.randomUUID(),
     name: "Custom Photo Lippan Art Frame",
-    category: "Glass Bottle Painting",
+    category: "Custom",
     price: "on demand",
     tag: "Unique",
     tone: "mustard",
@@ -788,10 +788,10 @@ const products = [
   {
     id: crypto.randomUUID(),
     name: "Custom Photo Lippan Art Frame",
-    category: "Glass Bottle Painting",
+    category: "Custom",
     price: "on demand",
     tag: "Unique",
-    tone: "mustard",
+    tone: "mustard",  
     desc: "Personalized handcrafted Lippan artwork featuring your cherished photograph within an ornate floral and mirror-work design. A meaningful keepsake for weddings, anniversaries, and special occasions.",
     images: [
       "/products/custom/c2/1.jpg",
@@ -806,13 +806,11 @@ const categories = [
   "All",
   "Lippan Art",
   "Glass Bottle Painting",
-  "Wall Hangings",
   "Diwali Décor",
   "Krishna's Bed",
   "Krishna's singhasan",
   "Rangoli",
   "Jewellery",
-  "Hampers",
   "Custom",
 ];
 

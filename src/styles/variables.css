@@ -1,0 +1,150 @@
+/* Design Tokens — The Artisan's Attic */
+
+:root {
+  /* Color — Background */
+  --bg-primary: #FAF7F4;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F5F0EA;
+  --bg-hover: #EDE5DB;
+
+  /* Color — Text */
+  --text-primary: #1C1815;
+  --text-secondary: #6B5E55;
+  --text-muted: #9A8D82;
+  --text-inverse: #FAF7F4;
+
+  /* Color — Border */
+  --border-subtle: #E8DFD6;
+  --border-medium: #D4C8BC;
+  --border-focus: #1C1815;
+
+  /* Color — Accent (Terracotta) */
+  --accent: #B85E43;
+  --accent-hover: #9D4D36;
+  --accent-light: #F5E8E3;
+  --accent-muted: #D4B8AE;
+
+  /* Color — Semantic */
+  --success: #4A7C59;
+  --success-light: #E8F2EB;
+  --error: #C0392B;
+  --error-light: #FCEAE8;
+  --warning: #B8860B;
+  --warning-light: #FDF6E3;
+
+  /* Typography */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+
+  /* Font Sizes — Fluid scaling */
+  --fs-hero: clamp(48px, 6vw, 80px);
+  --fs-h2: clamp(36px, 4vw, 56px);
+  --fs-h3: 22px;
+  --fs-h4: 18px;
+  --fs-body: 16px;
+  --fs-body-sm: 15px;
+  --fs-caption: 12px;
+  --fs-caption-sm: 11px;
+  --fs-btn: 13px;
+  --fs-tag: 11px;
+  --fs-price: 20px;
+
+  /* Line Heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+  --lh-loose: 1.85;
+
+  /* Letter Spacing */
+  --ls-tight: -0.03em;
+  --ls-snug: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.08em;
+  --ls-widest: 0.12em;
+
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-padding: var(--space-lg);
+  --container-padding-lg: var(--space-xl);
+
+  /* Header */
+  --header-height: 72px;
+  --header-height-mobile: 64px;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 999px;
+
+  /* Shadows — Restrained */
+  --shadow-sm: 0 1px 2px rgba(28, 24, 21, 0.04);
+  --shadow-md: 0 4px 12px rgba(28, 24, 21, 0.06);
+  --shadow-lg: 0 12px 28px rgba(28, 24, 21, 0.08);
+  --shadow-focus: 0 0 0 2px var(--accent);
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Z-Index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
+  --z-toast: 2000;
+
+  /* Image Placeholder */
+  --placeholder-bg: var(--bg-elevated);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: var(--header-height-mobile);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-base: 0ms;
+    --transition-slow: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast */
+@media (prefers-contrast: high) {
+  :root {
+    --border-subtle: var(--text-primary);
+    --border-medium: var(--text-primary);
+    --text-muted: var(--text-secondary);
+  }
+}
